@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="text-white py-4 mt-5">
     <div class="container text-center">
       <p>Follow us on:</p>
       <div class="social-icons">
@@ -23,3 +23,4 @@ export default {
 };
 </script>
 
+ 

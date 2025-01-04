@@ -1,16 +1,39 @@
 /* HomeView */
+header {
+    background-color: rgb(60, 60, 60)!important;
+}
+header .nav-link {
+    color: white !important;
+}
+header .nav-link:hover {
+    color: #ff0000 !important;
+    transform: scale(1.2);
+}
+.contact-info {
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+}
+
+.contact-info i {
+    margin-right: 5px;
+}
 
 .logo {
     border-radius: 25%;
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .logo:hover {
     transform: scale(1.2);
+}
+
+footer{
+    background-color: rgb(60, 60, 60)!important;
 }
