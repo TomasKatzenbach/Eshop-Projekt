@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Doplnky from '../views/Doplnky.vue'
 import Sipky from '../views/Sipky.vue'
 import Terce from '../views/Terce.vue'
+import Kosik from '../views/Kosik.vue'
 
 const routes = [
   {
@@ -25,6 +26,12 @@ const routes = [
     name: 'terce',
     component: Terce,
   },
+  {
+    path: '/kosik',
+    name: 'kosik',
+    component: Kosik,
+  },
+
 ]
 
 const router = createRouter({

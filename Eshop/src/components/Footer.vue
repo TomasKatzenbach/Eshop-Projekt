@@ -1,7 +1,7 @@
 <template>
   <footer class="text-white py-4 mt-5">
     <div class="container text-center">
-      <p>Follow us on:</p>
+      <p>Sleduj nás:</p>
       <div class="social-icons">
         <a href="#" class="text-white me-3">
           <i class="fab fa-facebook-f"></i> Facebook
