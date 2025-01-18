@@ -4,6 +4,8 @@ import Doplnky from '../views/Doplnky.vue'
 import Sipky from '../views/Sipky.vue'
 import Terce from '../views/Terce.vue'
 import Kosik from '../views/Kosik.vue'
+import Objednavky from '../views/Objednavky.vue'
+import Objednavka from '../views/Objednavka.vue'
 
 const routes = [
   {
@@ -30,6 +32,16 @@ const routes = [
     path: '/kosik',
     name: 'kosik',
     component: Kosik,
+  },
+  {
+    path: '/objednavky',
+    name: 'objednavky',
+    component: Objednavky,
+  },
+  {
+    path: '/objednavka',
+    name: 'objednavka',
+    component: Objednavka,
   },
 
 ]

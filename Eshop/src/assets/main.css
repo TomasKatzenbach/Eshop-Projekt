@@ -112,3 +112,14 @@ footer{
   .btn {
     margin-top: 10px;
   }
+
+  .order-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .orders-container {
+    padding: 20px;
+    text-align: center;
+  }
+  

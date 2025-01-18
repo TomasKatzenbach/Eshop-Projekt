@@ -20,7 +20,7 @@
     </div>
 
     <h2 class="text-center mb-4">Všetky produkty</h2>
-    <div v-for="product in products" :key="product.id" class="card mb-3">
+    <div v-for="product in sipky" :key="product.id" class="card mb-3">
       <div class="row g-0">
         <div class="col-md-4">
           <img :src="product.image" class="img-fluid rounded-start" :alt="product.name">
@@ -39,11 +39,12 @@
 </template>
 
 <script>
+import { useCartStore } from '../stores/kosik';
 export default {
   name: "Sipky",
   data() {
     return {
-      products: [
+      sipky: [
         {
           id: 1,
           name: "Thunder Series 3- Brass",
@@ -114,7 +115,8 @@ export default {
   },
   methods: {
     addToCart(product) {
-      console.log(`Added ${product.name} to cart`);
+      const cartStore = useCartStore();
+      cartStore.addToCart(product);
     }
   }
 };

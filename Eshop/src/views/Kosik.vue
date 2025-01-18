@@ -30,7 +30,7 @@
       </table>
       <div class="total">
         <h3>Celková cena: €{{ totalPrice }}</h3>
-        <button class="btn btn-primary">Pokračovať k platbe</button>
+        <button class="btn btn-primary" @click="proceedToCheckout">Pokračovať k platbe</button>
       </div>
     </div>
     <div v-else>
@@ -40,15 +40,14 @@
 </template>
 
 <script>
+import { useCartStore } from '../stores/kosik';
+
 export default {
   name: "Kosik",
   data() {
+    const cartStore = useCartStore();
     return {
-      cartItems: [
-        { id: 1, name: "Produkt 1", quantity: 2, price: 10 },
-        { id: 2, name: "Produkt 2", quantity: 1, price: 20 },
-        { id: 3, name: "Produkt 3", quantity: 3, price: 15 },
-      ],
+      cartItems: cartStore.cartItems,
     };
   },
   computed: {
@@ -57,23 +56,21 @@ export default {
     },
   },
   methods: {
-    increaseQuantity(id) {
-      const item = this.cartItems.find(item => item.id === id);
-      if (item) {
-        item.quantity++;
-      }
+    increaseQuantity(productId) {
+      const cartStore = useCartStore();
+      cartStore.increaseQuantity(productId);
     },
-    decreaseQuantity(id) {
-      const item = this.cartItems.find(item => item.id === id);
-      if (item && item.quantity > 1) {
-        item.quantity--;
-      }
+    decreaseQuantity(productId) {
+      const cartStore = useCartStore();
+      cartStore.decreaseQuantity(productId);
     },
-    removeFromCart(id) {
-      this.cartItems = this.cartItems.filter(item => item.id !== id);
+    removeFromCart(productId) {
+      const cartStore = useCartStore();
+      cartStore.removeFromCart(productId);
+    },
+    proceedToCheckout() {
+      this.$router.push('/objednavka');
     },
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

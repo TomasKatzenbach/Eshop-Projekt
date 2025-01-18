@@ -26,6 +26,9 @@
             <i class="fas fa-shopping-cart"></i>
           </router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/objednavky" class="nav-link">Objednávky</router-link>
+        </li>
       </ul>
       <div class="contact-info text-right text-white">
         <p class="mb-0">
