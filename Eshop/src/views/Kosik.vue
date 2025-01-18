@@ -44,15 +44,14 @@ import { useCartStore } from '../stores/kosik';
 
 export default {
   name: "Kosik",
-  data() {
-    const cartStore = useCartStore();
-    return {
-      cartItems: cartStore.cartItems,
-    };
-  },
   computed: {
+    cartItems() {
+      const cartStore = useCartStore();
+      return cartStore.cartItems;
+    },
     totalPrice() {
-      return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+      const cartStore = useCartStore();
+      return cartStore.totalPrice;
     },
   },
   methods: {

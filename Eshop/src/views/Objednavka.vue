@@ -54,7 +54,6 @@
 <script>
 import { useCartStore } from '../stores/kosik';
 import { useOrderStore } from '../stores/objednavky';
-import { useRouter } from 'vue-router';
 
 export default {
   name: "Objednavka",
@@ -73,7 +72,6 @@ export default {
     submitOrder() {
       const cartStore = useCartStore();
       const orderStore = useOrderStore();
-      const router = useRouter();
 
       const newOrder = {
         id: Date.now(),
