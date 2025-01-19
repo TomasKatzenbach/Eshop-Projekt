@@ -44,9 +44,8 @@ import { useOrderStore } from '../stores/objednavky';
 
 export default {
   name: "Objednavky",
-  setup() {
+  data() {
     const orderStore = useOrderStore();
-
     return {
       orders: orderStore.orders,
     };
